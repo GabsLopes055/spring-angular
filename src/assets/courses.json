@@ -1,0 +1,13 @@
+[
+  { "_id": "1", "name": "Angular", "category": "Front-end"},
+  { "_id": "2", "name": "Spring FrameWork", "category": "Back-end"},
+  { "_id": "3", "name": "Bootstrap", "category": "Front-end"},
+  { "_id": "4", "name": "HTML", "category": "Front-end"},
+  { "_id": "5", "name": "CSS", "category": "Front-end"},
+  { "_id": "6", "name": "Java", "category": "Back-End"},
+  { "_id": "7", "name": "JavaScript", "category": "Front-end"},
+  { "_id": "8", "name": "Angular Material", "category": "Front-end"},
+  { "_id": "9", "name": "SQL Server", "category": "Banco de Dados"},
+  { "_id": "10", "name": "MYSQL", "category": "Banco de Dados"}
+
+]

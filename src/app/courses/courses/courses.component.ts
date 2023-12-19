@@ -1,5 +1,8 @@
+import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
 import { Course } from './models/course';
+import { CourseService } from '../services/course.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-courses',
@@ -10,17 +13,18 @@ import { Course } from './models/course';
 
 export class CoursesComponent {
 
-  courses: Course[] = [
-    {_id: '1', name: 'Angular', category: 'Front-End'},
-    {_id: '2', name: 'React', category: 'Front-End'},
-    {_id: '3', name: 'HTML', category: 'Front-End'},
-    {_id: '4', name: 'CSS', category: 'Front-End'},
+  courses$: Observable<Course[]>;
 
-  ];
+  progressBar: boolean = true
 
-  displayedColumns: string[] = ['_id','name', 'category']
+  displayedColumns: string[] = ['_id', 'name', 'category'];
 
-  ngOnInit(): void {
+  constructor(
+    private service: CourseService
+  ) {
+    this.progressBar = false
+    this.courses$ = this.service.list();
+    // service.list().subscribe(courses => this.courses$ = courses);
   }
 
 }
