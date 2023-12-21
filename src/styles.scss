@@ -1,8 +1,8 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-$custom-app-primary: mat.define-palette(mat.$teal-palette, 900);
-$custom-app-secondary: mat.define-palette(mat.$orange-palette, 900);
+$custom-app-primary: mat.define-palette(mat.$teal-palette, 500);
+$custom-app-secondary: mat.define-palette(mat.$grey-palette, 900);
 $custom-app-warn: mat.define-palette(mat.$red-palette);
 
 $custom-theme: mat.define-light-theme((
