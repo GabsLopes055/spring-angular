@@ -23,8 +23,10 @@
 
         <!-- Position Column -->
         <ng-container matColumnDef="category">
-          <th mat-header-cell *matHeaderCellDef> Categoria </th>
-          <td mat-cell *matCellDef="let courses"> {{ courses.category }} </td>
+          <th mat-header-cell *matHeaderCellDef > Categoria </th>
+          <td mat-cell *matCellDef="let courses"> {{ courses.category }} &nbsp; <mat-icon>{{ courses.category | category
+              }}</mat-icon> </td>
+          <!-- <td mat-cell *matCellDef="let courses">  </td> -->
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
