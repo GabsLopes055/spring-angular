@@ -1,8 +1,8 @@
 @use "@angular/material" as mat;
 @include mat.core();
 
-$custom-app-primary: mat.define-palette(mat.$cyan-palette, A700);
-$custom-app-secondary: mat.define-palette(mat.$grey-palette, 900);
+$custom-app-primary: mat.define-palette(mat.$blue-palette);
+$custom-app-secondary: mat.define-palette(mat.$yellow-palette, 700);
 $custom-app-warn: mat.define-palette(mat.$red-palette);
 
 $custom-theme: mat.define-light-theme(
@@ -25,4 +25,8 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  // background-color: #666CFF;
+  // background-color: #30334E;
+  background-color: #cbd5e133;
+
 }

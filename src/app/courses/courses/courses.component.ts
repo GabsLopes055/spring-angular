@@ -5,6 +5,7 @@ import { CourseService } from '../services/course.service';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -19,11 +20,13 @@ export class CoursesComponent {
 
   progressBar: boolean = true
 
-  displayedColumns: string[] = ['_id', 'name', 'category'];
+  displayedColumns: string[] = ['_id', 'name', 'category', 'actions'];
 
   constructor(
     private service: CourseService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public router: Router,
+    public route: ActivatedRoute
   ) {
     this.progressBar = false
     this.courses$ = this.service.list().pipe(
@@ -40,6 +43,10 @@ export class CoursesComponent {
       height: 'auto',
       data: errorMessage
     })
+  }
+
+  OnAdd() {
+    this.router.navigate(['new'], {relativeTo: this.route })
   }
 
 }
