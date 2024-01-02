@@ -20,4 +20,8 @@ export class CourseService {
     );
   }
 
+  save(record: Course): Observable<Course> {
+    return this.http.post<Course>(this.API, record);
+  }
+
 }

@@ -20,13 +20,11 @@ export class CoursesComponent {
 
   progressBar: boolean = true
 
-  displayedColumns: string[] = ['_id', 'name', 'category', 'actions'];
+
 
   constructor(
     private service: CourseService,
-    public dialog: MatDialog,
-    public router: Router,
-    public route: ActivatedRoute
+    public dialog: MatDialog
   ) {
     this.progressBar = false
     this.courses$ = this.service.list().pipe(
@@ -43,10 +41,6 @@ export class CoursesComponent {
       height: 'auto',
       data: errorMessage
     })
-  }
-
-  OnAdd() {
-    this.router.navigate(['new'], {relativeTo: this.route })
   }
 
 }
